@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore neuropathy: its impact, warning signs and educational resources. Learn about peripheral nerve health.">
+    <title>Peripheral Neuropathy: A Comprehensive Guide</title>
+    <style>
+        :root {
+            --primary-color: #2a6b4e;
+            --secondary-color: #5baa8a;
+            --accent-color: #e6b735;
+            --text-color: #333333;
+            --light-color: #f5f7f5;
+            --dark-color: #2d3a32;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.75rem 0;
+            text-align: center;
+        }
+        
+        .hero {
+            padding: 4rem 0;
+            background-color: var(--light-color);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #d3a62f;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 2rem;
+            width: 100%;
+            max-width: 340px;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .information {
+            background-color: var(--light-color);
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .info-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .info-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .stories {
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .stories .section-title {
+            color: white;
+        }
+        
+        .stories .section-title:after {
+            background-color: var(--accent-color);
+        }
+        
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .story {
+            font-style: italic;
+            margin-bottom: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+        }
+        
+        .story-author {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        
+        .action {
+            text-align: center;
+            padding: 5rem 0;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        .form-container {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+        
+        .submit-btn {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            border: none;
+            padding: 14px 30px;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #d3a62f;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer-text {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .disclaimer-text {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 1rem;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+        
+        .close-modal {
+            color: #aaa;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+        
+        .modal h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modal h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        .modal p {
+            margin-bottom: 1rem;
+        }
+        
+        .modal ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        .modal li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 style="font-size: 1.8rem; font-weight: bold; margin: 0;">NeuroWell</h2>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Peripheral Neuropathy: A Comprehensive Guide</h1>
+            <p>Do you feel unusual sensations, pain, or weakness in your hands or feet? Explore our educational resources on peripheral neuropathy to better understand this condition.</p>
+            <a href="#connect" class="btn">Get Your Educational Guide</a>
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Understanding Peripheral Neuropathy</h2>
+            <p>Peripheral neuropathy involves damage to the nerves outside the brain and spinal cord. These nerves transmit information between your central nervous system and the rest of your body. Understanding this condition is the first step to having informed conversations with healthcare providers.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon">🔬</div>
+                    <h3>Key Statistics</h3>
+                    <p>Peripheral neuropathy is more common than many realize, affecting up to 30% of adults over 65. In people with diabetes, the prevalence can reach 50%, making it an important health topic to understand.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚨</div>
+                    <h3>Warning Signs</h3>
+                    <p>Gradual onset of numbness and tingling that may spread upward from feet or hands, sharp or burning pain, extreme sensitivity to touch, muscle weakness, and coordination difficulties.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🧩</div>
+                    <h3>Contributing Factors</h3>
+                    <p>Several factors can contribute to peripheral nerve issues, including metabolic conditions, vitamin deficiencies, toxin exposure, injury, infections, and genetic predispositions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="information">
+        <div class="container">
+            <h2 class="section-title">Educational Resources</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Clinical Knowledge</h3>
+                    <p>Educational materials explaining how healthcare professionals approach peripheral nerve conditions, including assessment methods and monitoring considerations.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Movement & Therapy Insights</h3>
+                    <p>Information about physical approaches that focus on maintaining strength, flexibility, and function that some people find helpful in their wellness routines.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Integrative Perspectives</h3>
+                    <p>Resources discussing various approaches some individuals incorporate into their health maintenance, including mind-body practices and complementary modalities.</p>
+                </div>
+                <div class="info-item">
+                    <h3>Daily Living Strategies</h3>
+                    <p>Practical information about day-to-day considerations, including nutrition, activity planning, and environmental modifications that support overall wellbeing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stories">
+        <div class="container">
+            <h2 class="section-title">Community Voices</h2>
+            <div class="story-container">
+                <div class="story">
+                    <p>"When I first noticed changes in sensation in my feet, I didn't know what to make of it. Finding reliable information about peripheral neuropathy helped me have educated discussions with my doctor and better understand the monitoring process."</p>
+                    <div class="story-author">Michael R., 67 years old</div>
+                </div>
+                <div class="story">
+                    <p>"As someone with a family history of neuropathy, I wanted to be proactive about understanding this condition. The educational materials I found not only explained the science but also provided practical insights about daily living considerations."</p>
+                    <div class="story-author">Sandra K., 54 years old</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="action" id="connect">
+        <div class="container">
+            <h2 class="section-title">Request Your Complimentary Guide</h2>
+            <p>Complete the form below to receive our comprehensive educational e-book about peripheral neuropathy and get notified about future informational resources.</p>
+            <div class="form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Areas of Interest (optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="What aspects of peripheral neuropathy are you most interested in learning about?"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Me The Guide</button>
+                </form>
+                <div id="confirmation-message" style="display: none; background-color: #4CAF50; color: white; padding: 15px; margin-top: 20px; border-radius: 5px; text-align: center;">
+                    <h3>Thank you for your request!</h3>
+                    <p>Your information was received successfully. We'll email your comprehensive guide to peripheral neuropathy shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 NeuroWell - Educational Resources for Neurological Health. All rights reserved.</p>
+            <p class="footer-text">
+                <a href="index.html" style="color: white; margin: 0 10px;">Home</a> |
+                <a href="#" class="modal-trigger" data-modal="terms-modal" style="color: white; margin: 0 10px;">Terms of Use</a> |
+                <a href="#" class="modal-trigger" data-modal="privacy-modal" style="color: white; margin: 0 10px;">Privacy Policy</a> |
+                <a href="#" class="modal-trigger" data-modal="refund-modal" style="color: white; margin: 0 10px;">Refund Policy</a> |
+                <a href="#" class="modal-trigger" data-modal="contact-modal" style="color: white; margin: 0 10px;">Contact Us</a>
+            </p>
+            <div class="disclaimer-text">
+                <p>Google and the Google logo are registered trademarks of Google LLC. Used with permission.</p>
+                <p>This site uses cookies to enhance user experience and analyze site traffic. By clicking any link on this page, you are giving your consent for us to set cookies.</p>
+                <p>The ads displayed on this website are delivered by Google, which may use cookies and technologies to personalize advertisements. For more information about how Google uses data, please visit Google's Privacy & Terms site.</p>
+                <p>This page may contain advertising content for which the operator of this website may be compensated.</p>
+                <p>This website provides general information about peripheral neuropathy for educational purposes only. It is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Terms of Use Modal -->
+    <div id="terms-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Terms of Use</h2>
+            <p>Last updated: January 1, 2025</p>
+            
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing and using the NeuroWell website ("Site"), you accept and agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our Site.</p>
+            
+            <h3>2. Information Purposes Only</h3>
+            <p>The content on this Site is provided for general information purposes only. It is not intended to be and should not be taken as medical advice. Always consult with qualified healthcare professionals regarding any health concerns or before making any health-related decisions.</p>
+            
+            <h3>3. No Doctor-Patient Relationship</h3>
+            <p>Use of this Site does not create a doctor-patient relationship. The information provided is not a substitute for professional medical advice, diagnosis, or treatment.</p>
+            
+            <h3>4. Intellectual Property</h3>
+            <p>All content on this Site, including text, graphics, logos, images, and software, is the property of NeuroWell or its content suppliers and is protected by international copyright laws. Unauthorized use of the Site's content may violate copyright, trademark, and other laws.</p>
+            
+            <h3>5. User Conduct</h3>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the Site in any way that violates any applicable laws or regulations</li>
+                <li>Impersonate or attempt to impersonate NeuroWell, a NeuroWell employee, or another user</li>
+                <li>Engage in any conduct that restricts or inhibits anyone's use of the Site</li>
+                <li>Attempt to gain unauthorized access to the Site</li>
+            </ul>
+            
+            <h3>6. Limitation of Liability</h3>
+            <p>NeuroWell shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising out of your access to, or use of, the Site. Your use of the Site is at your own risk.</p>
+            
+            <h3>7. Changes to Terms</h3>
+            <p>NeuroWell reserves the right to modify these Terms of Use at any time. We will inform users of any material changes by posting a notice on our Site. Your continued use of the Site after changes are posted constitutes your acceptance of the updated terms.</p>
+            
+            <h3>8. Governing Law</h3>
+            <p>These Terms of Use shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.</p>
+        </div>
+    </div>
+    
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Privacy Policy</h2>
+            <p>Last updated: January 1, 2025</p>
+            
+            <h3>1. Introduction</h3>
+            <p>NeuroWell ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site.</p>
+            
+            <h3>2. Information We Collect</h3>
+            <p>We may collect information about you in various ways:</p>
+            <ul>
+                <li><strong>Personal Data:</strong> Voluntarily provided information such as your name, email address, and phone number when you sign up for our newsletters or submit contact forms.</li>
+                <li><strong>Usage Data:</strong> Automatically collected information about how you access and use our website, including your IP address, browser type, referring/exit pages, and operating system.</li>
+                <li><strong>Cookies and Tracking Technologies:</strong> We may use cookies and similar tracking technologies to track activity on our website and hold certain information.</li>
+            </ul>
+            
+            <h3>3. How We Use Your Information</h3>
+            <p>We may use the information we collect about you for various purposes:</p>
+            <ul>
+                <li>To provide and maintain our website</li>
+                <li>To notify you about changes to our website</li>
+                <li>To allow you to participate in interactive features when you choose to do so</li>
+                <li>To provide customer support</li>
+                <li>To gather analysis or valuable information so that we can improve our website</li>
+                <li>To monitor the usage of our website</li>
+                <li>To detect, prevent and address technical issues</li>
+                <li>To send you educational materials and information about neuropathy</li>
+            </ul>
+            
+            <h3>4. Google Analytics and Advertising</h3>
+            <p>We use Google Analytics to track and analyze website usage. We may also use Google Advertising features, which could include remarketing, Google Display Network Impression Reporting, and Google Analytics Demographics and Interest Reporting.</p>
+            
+            <h3>5. Your Data Protection Rights</h3>
+            <p>Depending on your location, you may have certain rights regarding your personal information, including access, correction, deletion, restriction, and data portability.</p>
+        </div>
+    </div>
+    
+    <!-- Refund Policy Modal -->
+    <div id="refund-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Refund Policy</h2>
+            <p>Last updated: January 1, 2025</p>
+            
+            <h3>1. Digital Products and Information</h3>
+            <p>Our website primarily provides educational information and digital resources about peripheral neuropathy. Many of our materials are provided free of charge. For any premium digital content or educational materials you may purchase:</p>
+            
+            <ul>
+                <li>We offer a 30-day money-back guarantee for most digital products.</li>
+                <li>To request a refund, please contact our customer support team at [your email] with your order details.</li>
+                <li>We reserve the right to decline refund requests that we determine are not made in good faith.</li>
+            </ul>
+            
+            <h3>2. Refund Process</h3>
+            <p>If you are eligible for a refund, we will process it using the original payment method within 5-7 business days of approval. Depending on your financial institution, it may take additional time for the refund to appear in your account.</p>
+            
+            <h3>3. Information Services</h3>
+            <p>For any consultations or information services we may provide:</p>
+            <ul>
+                <li>Cancellations made 48 hours or more before a scheduled consultation are eligible for a full refund.</li>
+                <li>Cancellations made less than 48 hours before a scheduled consultation may be subject to a cancellation fee.</li>
+                <li>No-shows or cancellations after a consultation has started are not eligible for a refund.</li>
+            </ul>
+            
+            <h3>4. Exceptions</h3>
+            <p>We may make exceptions to this policy on a case-by-case basis, at our sole discretion. Special circumstances such as technical issues on our end or exceptional personal situations may be considered for refunds outside our standard policy.</p>
+            
+            <h3>5. Contact Us</h3>
+            <p>If you have any questions about our refund policy or would like to request a refund, please contact our customer support team at [your email].</p>
+        </div>
+    </div>
+    
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Us</h2>
+            
+            <p>We're here to provide you with educational resources about peripheral neuropathy. If you have any questions or would like more information, please get in touch with us using the information below.</p>
+            
+            <h3>Email</h3>
+            <p>info@neurowell-example.com</p>
+            
+            <h3>Phone</h3>
+            <p>+1 (555) 123-4567</p>
+            
+            <h3>Hours of Operation</h3>
+            <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+            Saturday - Sunday: Closed</p>
+            
+            <h3>Address</h3>
+            <p>123 Nerve Health Center<br>
+            Suite 456<br>
+            Anytown, ST 12345<br>
+            United States</p>
+            
+            <h3>Send us a message</h3>
+            <form id="contact-modal-form">
+                <div class="form-group">
+                    <label for="modal-name">Full Name</label>
+                    <input type="text" id="modal-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-subject">Subject</label>
+                    <input type="text" id="modal-subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-message">Message</label>
+                    <textarea id="modal-message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="modal-confirmation" style="display: none; background-color: #4CAF50; color: white; padding: 15px; margin-top: 20px; border-radius: 5px; text-align: center;">
+                <p>Thank you for your message! We will get back to you shortly.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Hide the form
+            this.style.display = 'none';
+            
+            // Show the confirmation message
+            document.getElementById('confirmation-message').style.display = 'block';
+            
+            // Reset the form (in case the user navigates back)
+            this.reset();
+            
+            // Here you would add the logic to actually process the form
+            // Such as sending the data to a server or API
+        });
+
+        // Modal functionality
+        const modalTriggers = document.querySelectorAll('.modal-trigger');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        
+        // Open modal when clicking on trigger
+        modalTriggers.forEach(trigger => {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            });
+        });
+        
+        // Close modal when clicking on close button
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modal = this.closest('.modal');
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = ''; // Restore scrolling
+                }, 300);
+            });
+        });
+        
+        // Close modal when clicking outside of modal content
+        modals.forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    modal.classList.remove('show');
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = ''; // Restore scrolling
+                    }, 300);
+                }
+            });
+        });
+        
+        // Contact form in modal
+        document.getElementById('contact-modal-form')?.addEventListener('submit', function(event) {
+            event.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('modal-confirmation').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html> 
